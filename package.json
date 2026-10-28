@@ -1,0 +1,47 @@
+{
+  "name": "linc-dsh-market-scout",
+  "version": "4.1.0",
+  "description": "让 DSH 智能体自己上插件市场：先查覆盖、缺能力才搜、装前体检、装后复查，并把结论记成备忘。 | An on-demand plugin scout for DeepSeek Harness: coverage check, market search, pre-install audit, post-install verify, and a persistent memory.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "lib",
+    "skills",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dshapp-plugin",
+    "cordis",
+    "plugin",
+    "deepseek-harness",
+    "marketplace",
+    "scout",
+    "agent",
+    "skill"
+  ],
+  "author": "Linc",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ghost-Linc/linc-dsh-market-scout.git"
+  },
+  "homepage": "https://github.com/Ghost-Linc/linc-dsh-market-scout#readme",
+  "engines": {
+    "node": ">=18"
+  }
+}

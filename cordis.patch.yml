@@ -1,0 +1,13 @@
+# DSH profile bundle patch —— 这一行把「市场侦察兵」挂进 profile
+# （package.json 的 dsh.bundle.patch 指向本文件）
+#
+# 安装：
+#     dsh plugin --profile desktop add <本目录的绝对路径>     # 走官方通道（pnpm + 回滚 + 版本检查）
+# 或本地已装之后，确认 patch 真的挂上：
+#     读 profile 的 cordis.patch.yml，应能看到下面这条 insert
+#
+# id 取 `market-scout` 而不是包名：profile 里的 id 是**全局命名空间**，短名更不容易和
+# 将来别的市场类插件撞车。撞车是插件装得上但行为不可预期的那类故障，audit 会先拦一次。
+- insert:
+    - id: market-scout
+      name: 'linc-dsh-market-scout'
